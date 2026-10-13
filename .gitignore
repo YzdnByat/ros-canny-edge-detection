@@ -1,0 +1,26 @@
+# Catkin build products
+build/
+devel/
+install/
+logs/
+.catkin_tools/
+.catkin_workspace
+
+# Python and local editors
+__pycache__/
+*.py[cod]
+.venv/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local datasets, recordings, and temporary outputs
+*.bag
+*.bag.active
+*.bag.orig
+*.db3
+*.mcap
+data/
+outputs/
+*.log

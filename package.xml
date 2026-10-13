@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>edge_detection_node</name>
+  <version>0.1.0</version>
+  <description>Canny edge detection for ROS camera images with dynamic parameter tuning and RViz visualization.</description>
+  <!-- Replace the original placeholder email before publishing. -->
+  <maintainer email="yazdan@todo.todo">Yazdan Bayat</maintainer>
+  <!-- Select a license and add its matching LICENSE file before publishing. -->
+  <license>TODO</license>
+  <author>Yazdan Bayat</author>
+  <url type="repository">https://github.com/YzdnByat/ros-canny-edge-detection</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>cv_bridge</depend>
+  <depend>dynamic_reconfigure</depend>
+  <depend>rospy</depend>
+  <depend>sensor_msgs</depend>
+  <exec_depend>python3-opencv</exec_depend>
+  <exec_depend>rviz</exec_depend>
+  <exec_depend>rqt_reconfigure</exec_depend>
+</package>
