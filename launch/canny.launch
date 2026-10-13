@@ -1,0 +1,17 @@
+<launch>
+  <arg name="input_topic" default="/kitti/camera_color_left/image_raw" />
+  <arg name="output_topic" default="/kitti/camera_color_left/canny_det" />
+  <arg name="rviz" default="true" />
+  <arg name="rqt" default="false" />
+
+  <node pkg="edge_detection_node" type="edge_detection.py"
+        name="edge_detection_node" output="screen">
+    <remap from="/kitti/camera_color_left/image_raw" to="$(arg input_topic)" />
+    <remap from="/kitti/camera_color_left/canny_det" to="$(arg output_topic)" />
+  </node>
+
+  <node if="$(arg rviz)" pkg="rviz" type="rviz" name="canny_rviz"
+        args="-d $(find edge_detection_node)/rviz/canny.rviz" />
+  <node if="$(arg rqt)" pkg="rqt_reconfigure" type="rqt_reconfigure"
+        name="canny_reconfigure" />
+</launch>
